@@ -138,18 +138,27 @@ npm install package_name # install a specific package
   "dev":        "tsx src/filename.ts",
   "scrap:all":  "tsx src/filename.ts",
   "scrap2:all": "npm run build && node ./dist/filename.js"
+  "clean": "rm -rf dist",
 }
 ```
 
 ### Running your code
 ```bash
-tsx src/filename.ts                 # direct run — best in development
-npx ts-node file_name.ts    # direct run
+npx tsx src/filename.ts      # direct run — best in development
+tsx filena,e.ts              # npm.cmd install -g tsx
+npx ts-node file_name.ts     # direct run
 npm run build                # compile TypeScript → JavaScript
 node ./dist/filename.js      # run compiled output
 npm run start:all            # build + run (production)
 npm run scrap:all            # tsx direct run (development)
 ```
+### Running Code compare
+| Method | Command | Use Case |
+| :--- | :--- | :--- |
+| **Direct (Local)** | `npx tsx filename.ts` | Best for development |
+| **Direct (Global)** | `tsx filename.ts` | Fastest (requires `npm i -g tsx`) |
+| **Compiled** | `npm run build && npm start` | Best for production/stability |
+| **NPM Script** | `npm run scrap` | Easiest for team members |
 
 ---
 
