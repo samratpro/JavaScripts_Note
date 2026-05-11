@@ -143,7 +143,8 @@ npm install package_name # install a specific package
 
 ### Running your code
 ```bash
-tsx src/filename.ts          # direct run — best in development
+tsx src/filename.ts                 # direct run — best in development
+npx ts-node file_name.ts    # direct run
 npm run build                # compile TypeScript → JavaScript
 node ./dist/filename.js      # run compiled output
 npm run start:all            # build + run (production)
